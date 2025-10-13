@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Choice-Based Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-box">
+            <div class="info-section">
+                <div id="survivors">
+                    <span>بازمانده‌ها: <span id="survivors-count">50</span></span>
+                </div>
+                <div id="kills">
+                    <span>کیـل‌ها: <span id="kills-count">0</span></span>
+                </div>
+                <div id="audio-control">
+                    <button id="toggle-audio">🔊</button>
+                </div>
+                <div id="health">
+                    <div id="health-bar-container">
+                        <div id="health-bar"></div>
+                    </div>
+                    <span id="health-value">HP 200/200</span>
+                </div>
+                <div id="inventory">
+                    <div id="medkit-count"><img src="./image/items/medkit.png" alt="مدکیت"> <span>0</span></div>
+                    <div id="ice-count"><img src="./image/items/ice_wall.png" alt="یخ"> <span>1</span></div>
+                    <div id="grenade-count"><img src="./image/items/grenade.png" alt="نارنجک"> <span>0</span></div>
+                </div>
+                <div id="weapons-display">
+                    <img id="weapon1-image" src="" alt="اسلحه 1" style="display: none;">
+                    <img id="weapon2-image" src="" alt="اسلحه 2" style="display: none;">
+                </div>
+                <div id="character-display">
+                    <img id="character-image" src="" alt="شخصیت">
+                </div>
+            </div>
+            <div class="choices-section">
+                <div id="stage-title"></div>
+                <div id="dialog">
+                    <img id="dialog-image" src="" alt="دیالوگ" style="display: none;">
+                    <div id="dialog-text"></div>
+                </div>
+                <div id="timer">
+                    <span id="timer-value">10.0</span>
+                    <div id="timer-bar-container">
+                        <div id="timer-bar"></div>
+                    </div>
+                </div>
+                <div id="choices"></div>
+            </div>
+        </div>
+    </div>
+    <div id="image-modal" class="modal">
+        <span id="modal-close">&times;</span>
+        <img id="modal-image" src="" alt="تصویر بزرگ">
+    </div>
+    <div id="weapon-swap-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>انتخاب اسلحه برای جایگزینی</h2>
+            <div id="weapon-swap-options"></div>
+            <button id="weapon-swap-cancel">لغو</button>
+        </div>
+    </div>
+    <div id="minigame-modal" class="modal" style="display: none;">
+        <div class="modal-content"></div>
+    </div>
+    <audio id="background-audio" src="./music/background.mp3" loop></audio>
+    <script type="module" src="script.js"></script>
+        <script type="module" src="mission.js"></script>
+</body>
+</html>
